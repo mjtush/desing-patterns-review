@@ -9,6 +9,6 @@ namespace WeatherStation.ObserverPattern
     {
         public void RegisterObserver(IObserver observer);
         public void RemoveObserver(IObserver observer);
-        public void NotifyObserver();
+        public void NotifyObservers();
     }
 }
