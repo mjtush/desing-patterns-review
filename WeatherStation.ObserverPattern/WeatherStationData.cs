@@ -47,7 +47,7 @@ namespace WeatherStation.ObserverPattern
         {
             foreach (var observer in _observers)
             {
-                observer.Update(_temp, _hummidity, _pressure);
+                observer.Update();
             }
         }
 

@@ -16,18 +16,18 @@ namespace WeatherStation.ObserverPattern
             _weatherStationData = weatherStationData;
             _weatherStationData.RegisterObserver(this);
         }
-        public void Update(float temp, float hummidity, float pressure = 0)
+        public void Update()
         {
-            _temp = temp;
-            _hummidity = hummidity;
+            _temp = _weatherStationData.Temperature;
+            _hummidity = _weatherStationData.Humidity;
             Display();
         }
 
         public void Display()
         {
-            Console.WriteLine($@"""Current weather conditions
+            Console.WriteLine($@"Current weather conditions
             Temperature: {_temp } C,
-            Humidity: {_hummidity} %""");
+            Humidity: {_hummidity} %");
         }
 
        

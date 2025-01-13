@@ -15,7 +15,7 @@ namespace WeatherStation.ObserverPattern
             }
         }
 
-        void Update(float temp, float hummidity, float pressure)
+        public void Update()
         {
             throw new NotImplementedException();
         }
