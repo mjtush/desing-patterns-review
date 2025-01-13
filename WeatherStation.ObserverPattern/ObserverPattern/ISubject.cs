@@ -5,6 +5,7 @@ using System.Text;
 
 namespace WeatherStation.ObserverPattern
 {
+
     public interface ISubject
     {
         IObserver IObserver { get; set; }

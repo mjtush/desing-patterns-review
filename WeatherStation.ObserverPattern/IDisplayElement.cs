@@ -5,8 +5,8 @@ using System.Text;
 
 namespace WeatherStation.ObserverPattern
 {
-    public interface IObserver
+    public interface IDisplayElement
     {
-        void update();
+        void Display();
     }
 }
