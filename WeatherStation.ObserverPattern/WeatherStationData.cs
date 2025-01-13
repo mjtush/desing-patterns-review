@@ -43,7 +43,7 @@ namespace WeatherStation.ObserverPattern
             _observers.Remove(observer);
         }
 
-        private void notifyObservers()
+        public void NotifyObservers()
         {
             foreach (var observer in _observers)
             {
@@ -53,7 +53,7 @@ namespace WeatherStation.ObserverPattern
 
         public void MeasurementsChanged()
         {
-            notifyObservers();
+            NotifyObservers();
         }
 
         public void SetMeasurements(float temp, float hummidity, float pressure)
@@ -62,7 +62,7 @@ namespace WeatherStation.ObserverPattern
             _hummidity = hummidity;
             _pressure = pressure;
 
-            notifyObservers();
+            NotifyObservers();
         }
     }
 }
