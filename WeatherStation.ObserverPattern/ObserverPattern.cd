@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
+  <Class Name="WeatherStation.ObserverPattern.ConcreteSubject">
+    <Position X="3" Y="4.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAACAAAIAAAAAAAAAAAAAAAAAAAAAAADAAAAAA=</HashCode>
+      <FileName>ConcreteSubject.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="WeatherStation.ObserverPattern.ConcreteObserver">
+    <Position X="7.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAEAAA=</HashCode>
+      <FileName>ConcreteObserver.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="ConcreteSubject" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Interface Name="WeatherStation.ObserverPattern.ISubject">
+    <Position X="3" Y="1.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAACAAAIAAAAAAAAAAAAAAAAAAIAAAACAAAAAA=</HashCode>
+      <FileName>ISubject.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="IObserver" />
+    </ShowAsAssociation>
+  </Interface>
+  <Interface Name="WeatherStation.ObserverPattern.IObserver">
+    <Position X="7.25" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAA=</HashCode>
+      <FileName>IObserver.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
