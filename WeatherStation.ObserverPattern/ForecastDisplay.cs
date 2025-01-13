@@ -7,22 +7,38 @@ namespace WeatherStation.ObserverPattern
 {
     public class ForecastDisplay : IObserver, IDisplayElement
     {
-        public WeatherStationData WeatherStationData
-        {
-            get => default;
-            set
-            {
-            }
-        }
+        private float _currentPressure = 1_014f;
+        private float _lastPressure;
+        private float _forecastedPressure;
 
+        private readonly WeatherStationData _weatherStationData;
+
+        public ForecastDisplay(WeatherStationData weatherStationData)
+        {
+            _weatherStationData = weatherStationData;
+            _weatherStationData.RegisterObserver(this);
+        }
         public void Update()
         {
-            throw new System.NotImplementedException();
+            _lastPressure = _currentPressure;
+            _currentPressure = _weatherStationData.Pressure;
+            _forecastedPressure = ForecastPressure();
+            Display();
         }
 
         public void Display()
         {
-            throw new System.NotImplementedException();
+            Console.WriteLine($"Last pressure: {_lastPressure:F1} hPa,\nCurrent pressure: {_currentPressure:F1} hPa,\nForecasted pressure {_forecastedPressure:F1} hPa");
+            Console.WriteLine("------------------\n");
+        }
+
+        private float ForecastPressure()
+        {
+            var rnd = new Random();
+            float minVal = 0.88f;
+            float maxVal = 1.12f;
+            float randomFloat = minVal + (float)(rnd.NextDouble() * (maxVal - minVal));
+            return _currentPressure * randomFloat;
         }
     }
 }
