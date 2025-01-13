@@ -7,22 +7,29 @@ namespace WeatherStation.ObserverPattern
 {
     public class CurrentDisplay : IObserver, IDisplayElement
     {
-        public WeatherStationData WeatherStationData
+        private float _temp;
+        private float _hummidity;
+        private WeatherStationData _weatherStationData;
+
+        public CurrentDisplay(WeatherStationData weatherStationData)
         {
-            get => default;
-            set
-            {
-            }
+            _weatherStationData = weatherStationData;
+            _weatherStationData.RegisterObserver(this);
+        }
+        public void Update(float temp, float hummidity, float pressure = 1013)
+        {
+            _temp = temp;
+            _hummidity = hummidity;
+            Display();
         }
 
-        public void Update()
+        private void Display()
         {
-            throw new System.NotImplementedException();
+            Console.WriteLine($@"""Current weather conditions
+            Temperature: {_temp } C,
+            Humidity: {_hummidity} %""");
         }
 
-        public void Display()
-        {
-            throw new System.NotImplementedException();
-        }
+       
     }
 }
