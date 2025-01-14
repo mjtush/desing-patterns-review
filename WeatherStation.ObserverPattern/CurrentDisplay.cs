@@ -28,6 +28,7 @@ namespace WeatherStation.ObserverPattern
             Console.WriteLine($@"Current weather conditions
             Temperature: {_temp } C,
             Humidity: {_hummidity} %");
+            Console.WriteLine("------------------\n");
         }
 
        
