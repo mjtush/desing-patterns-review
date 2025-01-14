@@ -12,7 +12,6 @@
             weatherStationData.SetMeasurements(32, pressure: 1000, hummidity: 80);
             weatherStationData.SetMeasurements(32, 89, 999);
             weatherStationData.SetMeasurements(25, 70, 990);
-
         }
     }
 }

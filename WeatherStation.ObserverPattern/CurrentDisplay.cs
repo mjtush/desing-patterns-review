@@ -30,7 +30,5 @@ namespace WeatherStation.ObserverPattern
             Humidity: {_hummidity} %");
             Console.WriteLine("------------------\n");
         }
-
-       
     }
 }

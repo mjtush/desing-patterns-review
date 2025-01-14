@@ -13,7 +13,6 @@ namespace WeatherStation.ObserverPattern
         private float _maxTemp;
         private float _minTemp;
 
-
         private readonly WeatherStationData _weatherStationData;
 
         public StatisticsDisplay(WeatherStationData weatherStationData)
@@ -22,6 +21,7 @@ namespace WeatherStation.ObserverPattern
             _weatherStationData.RegisterObserver(this);
             _historicalTemperatures.Add(_currentTemp);
         }
+
         public void Update()
         {
             _currentTemp = _weatherStationData.Temperature;
@@ -54,6 +54,5 @@ namespace WeatherStation.ObserverPattern
             Console.WriteLine($"Min/Avg/Max Temperature: {_minTemp}/{_averageTemp}/{_maxTemp} C.");
             Console.WriteLine("------------------\n");
         }
-
     }
 }
