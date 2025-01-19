@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34701.34
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeatherStation.ObserverPattern", "WeatherStation.ObserverPattern\WeatherStation.ObserverPattern.csproj", "{7B50D366-7F55-45A0-9EA9-C98C974488E2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WeatherStation.ObserverPattern", "WeatherStation.ObserverPattern\WeatherStation.ObserverPattern.csproj", "{7B50D366-7F55-45A0-9EA9-C98C974488E2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BeverageShop.DecoratorPattern", "BeverageShop.DecoratorPattern\BeverageShop.DecoratorPattern.csproj", "{A7AF76CF-8766-4E9F-8F64-E99A4D6ECB3B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{7B50D366-7F55-45A0-9EA9-C98C974488E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7B50D366-7F55-45A0-9EA9-C98C974488E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7B50D366-7F55-45A0-9EA9-C98C974488E2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A7AF76CF-8766-4E9F-8F64-E99A4D6ECB3B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A7AF76CF-8766-4E9F-8F64-E99A4D6ECB3B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A7AF76CF-8766-4E9F-8F64-E99A4D6ECB3B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A7AF76CF-8766-4E9F-8F64-E99A4D6ECB3B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
