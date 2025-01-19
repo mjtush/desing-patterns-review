@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="BeverageShop.DecoratorPattern.DecoratorPattern.Component">
+    <Position X="5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAQAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DecoratorPattern\Component.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BeverageShop.DecoratorPattern.DecoratorPattern.ConcreteComponent">
+    <Position X="3.25" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAQAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DecoratorPattern\ConcreteComponent.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BeverageShop.DecoratorPattern.DecoratorPattern.ConcreteDecorator">
+    <Position X="6.25" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DecoratorPattern\ConcreteDecorator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BeverageShop.DecoratorPattern.DecoratorPattern.Decorator">
+    <Position X="6.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAIAAAAAAAAAAABAAAAAAAEAAAAA=</HashCode>
+      <FileName>DecoratorPattern\Decorator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
