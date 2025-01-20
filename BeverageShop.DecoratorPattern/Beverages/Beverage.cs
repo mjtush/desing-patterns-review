@@ -4,13 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BeverageShop.DecoratorPattern
+namespace BeverageShop.DecoratorPattern.Beverages
 {
     public abstract class Beverage
     {
-        protected string description = "Unknown beverage";
+        protected string DescriptionField = "Unknown Beverage";
 
-        public string Description { get => description; }
+        public abstract string Description { get; }
 
         public abstract double Cost();
     }

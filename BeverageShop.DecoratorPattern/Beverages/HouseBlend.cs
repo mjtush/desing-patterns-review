@@ -1,10 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace BeverageShop.DecoratorPattern
+﻿
+namespace BeverageShop.DecoratorPattern.Beverages
 {
     internal class HouseBlend : Beverage
     {
@@ -12,9 +7,11 @@ namespace BeverageShop.DecoratorPattern
 
         public HouseBlend()
         {
-            description = "HouseBlend";
+            DescriptionField = "House Blend";
             _cost = 0.89;
         }
+
+        public override string Description => DescriptionField;
 
         public override double Cost()
         {

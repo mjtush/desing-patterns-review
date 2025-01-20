@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BeverageShop.DecoratorPattern.Beverages;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,9 +13,11 @@ namespace BeverageShop.DecoratorPattern
 
         public Decaf()
         {
-            description = "Decaf";
+            DescriptionField = "Decaf";
             _cost = 1.05;
         }
+
+        public override string Description => DescriptionField;
 
         public override double Cost()
         {
