@@ -5,17 +5,34 @@ namespace BeverageShop.DecoratorPattern
 {
     internal class Soy : CondimentDecorator
     {
-        private readonly double _cost = 0.15;
+        private readonly double _costForSmallSizeCup = 0.1;
+        private readonly double _costForMiddleSizeCup = 0.15;
+        private readonly double _costForBigSizeCup = 0.2;
 
         public Soy(Beverage beverage) : base(beverage)
         {
         }
 
-        public override string Description => this.Beverage.Description + ", Soy";
+        public override string Description => Beverage.Description + ", Soy";
 
         public override double Cost()
         {
-            return this.Beverage.Cost() + _cost;
+
+            var cost = Beverage.Cost();
+            switch (Beverage.Size)
+            {
+                case Size.Small:
+                    cost += _costForSmallSizeCup;
+                    break;
+                case Size.Medium:
+                    cost += _costForMiddleSizeCup;
+                    break;
+                case Size.Big:
+                    cost += _costForBigSizeCup;
+                    break;
+            }
+
+            return cost;
         }
     }
 }

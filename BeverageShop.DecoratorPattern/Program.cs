@@ -24,6 +24,12 @@ namespace BeverageShop.DecoratorPattern
             beverage3 = new Whip(beverage3);
 
             WriteLine($"{beverage3.Description} ${beverage3.Cost()}");
+
+            Beverage beverage4 = new DarkRoast();
+            beverage4 = new Soy(beverage4);
+            beverage.Size = Size.Medium;
+
+            WriteLine($"{beverage4.Description} ${beverage4.Cost()}");
         }
     }
 }
