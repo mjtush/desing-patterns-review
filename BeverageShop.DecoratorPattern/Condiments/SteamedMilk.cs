@@ -5,7 +5,9 @@ namespace BeverageShop.DecoratorPattern
 {
     internal class SteamedMilk : CondimentDecorator
     {
-        private readonly double _cost = 0.20;
+        private double _costForSmallSizeCup = 0.15;
+        private double _costForMiddleSizeCup = 0.20;
+        private double _costForBigSizeCup = 0.25;
 
         public SteamedMilk(Beverage beverage) : base(beverage)
         {
@@ -15,7 +17,21 @@ namespace BeverageShop.DecoratorPattern
 
         public override double Cost()
         {
-            return this.Beverage.Cost() + _cost;
+            var cost = Beverage.Cost();
+            switch (Beverage.Size)
+            {
+                case Size.Small:
+                    cost += _costForSmallSizeCup;
+                    break;
+                case Size.Medium:
+                    cost += _costForMiddleSizeCup;
+                    break;
+                case Size.Big:
+                    cost += _costForBigSizeCup;
+                    break;
+            }
+
+            return cost;
         }
     }
 }
