@@ -5,7 +5,9 @@ namespace BeverageShop.DecoratorPattern
 {
     internal class Whip : CondimentDecorator
     {
-        private readonly double _cost = 0.10;
+        private double _costForSmallSizeCup = 0.05;
+        private double _costForMiddleSizeCup = 0.10;
+        private double _costForBigSizeCup = 0.15;
 
         public Whip(Beverage beverage) : base(beverage)
         {
@@ -15,7 +17,16 @@ namespace BeverageShop.DecoratorPattern
 
         public override double Cost()
         {
-            return this.Beverage.Cost() + _cost;
+            var cost = Beverage.Cost();
+            cost += Beverage.Size switch
+            {
+                Size.Small => _costForSmallSizeCup,
+                Size.Medium => _costForMiddleSizeCup,
+                Size.Big => _costForBigSizeCup,
+                _ => 0
+            };
+
+            return cost;
         }
     }
 }
