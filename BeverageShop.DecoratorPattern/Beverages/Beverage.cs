@@ -28,14 +28,26 @@ namespace BeverageShop.DecoratorPattern.Beverages
 
             set
             {
-                if (int.IsNegative((int)value))
-                {
-                    throw new ArgumentException("Value cannot be negative.");
-                }
-
+                ValidateSize(value);
+                ValidateNonNegative((int)value);
                 _size = value;
             }
-                
+        }
+
+        private static void ValidateSize(Size value)
+        {
+            if (!Enum.IsDefined(typeof(Size), value))
+            {
+                throw new ArgumentException("Invalid size value.");
+            }
+        }
+
+        private static void ValidateNonNegative(int value)
+        {
+            if (int.IsNegative(value))
+            {
+                throw new ArgumentException("Value cannot be negative.");
+            }
         }
     }
 }
