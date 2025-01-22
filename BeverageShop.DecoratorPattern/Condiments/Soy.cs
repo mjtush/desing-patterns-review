@@ -1,7 +1,7 @@
 ﻿using BeverageShop.DecoratorPattern.Condiments;
 using BeverageShop.DecoratorPattern.Beverages;
 
-namespace BeverageShop.DecoratorPattern
+namespace BeverageShop.DecoratorPattern.Condiments
 {
     internal class Soy : CondimentDecorator
     {
@@ -17,7 +17,6 @@ namespace BeverageShop.DecoratorPattern
 
         public override double Cost()
         {
-
             var cost = Beverage.Cost();
             switch (Beverage.Size)
             {
