@@ -1,21 +1,38 @@
 ﻿using BeverageShop.DecoratorPattern.Condiments;
 using BeverageShop.DecoratorPattern.Beverages;
 
-namespace BeverageShop.DecoratorPattern
+namespace BeverageShop.DecoratorPattern.Condiments
 {
     internal class Mocha : CondimentDecorator
     {
-        private readonly double _cost = 0.20;
+        private double _costForSmallSizeCup = 0.15;
+        private double _costForMiddleSizeCup = 0.20;
+        private double _costForBigSizeCup = 0.25;
 
         public Mocha(Beverage beverage) : base(beverage)
         {
         }
 
-        public override string Description => this.Beverage.Description + ", Mocha";
+        public override string Description => Beverage.Description + ", Mocha";
 
         public override double Cost()
         {
-            return this.Beverage.Cost() + _cost;
+
+            var cost = Beverage.Cost();
+            switch (Beverage.Size)
+            {
+                case Size.Small:
+                    cost += _costForSmallSizeCup;
+                    break;
+                case Size.Medium:
+                    cost += _costForMiddleSizeCup;
+                    break;
+                case Size.Big:
+                    cost += _costForBigSizeCup;
+                    break;
+            }
+
+            return cost;
         }
     }
 }
