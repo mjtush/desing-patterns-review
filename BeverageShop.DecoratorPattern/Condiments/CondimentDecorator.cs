@@ -10,19 +10,11 @@ namespace BeverageShop.DecoratorPattern.Condiments
 {
     public abstract class CondimentDecorator : Beverage
     {
-        protected Beverage? Beverage;
+        protected Beverage Beverage;
 
         protected CondimentDecorator(Beverage beverage)
         {
-
-            if (beverage is not null)
-            {
-                Beverage = beverage;
-            }
-            else
-            {
-                throw new ArgumentNullException(nameof(beverage));
-            }
+            Beverage = beverage ?? throw new ArgumentNullException(nameof(beverage));
         }
     }
 }
