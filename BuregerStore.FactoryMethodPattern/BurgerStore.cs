@@ -4,16 +4,22 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BurgerStore.FactoryMethodPattern
+namespace BurgerStores.FactoryMethodPattern
 {
-    abstract class BuregerStore
+    public abstract class BurgerStore
     {
         public Burger OrderBurger(string type)
         {
+            if (string.IsNullOrWhiteSpace(type))
+            {
+                throw new ArgumentException("Burger type cannot be null or empty", nameof(type));
+            }
+
             Burger burger = CreateBurger(type);
+            burger.Grill();
             burger.Prepare();
-            burger.Cook();
             burger.Box();
+
             return burger;
         }
 
