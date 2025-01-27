@@ -1,18 +1,17 @@
 ﻿using static System.Console;
 
-namespace BurgerStore.FactoryMethodPattern
+namespace BurgerStores.FactoryMethodPattern
 {
     public abstract class Burger
     {
         protected string Name;
         protected string Roll;
         protected string Meat;
-        protected List<string> Trimmings = [];
+        protected List<string> Trimmings = ["Cheese", "Cucumber" , "Tomato"];
 
-
-        public virtual void Fry()
+        public virtual void Grill()
         {
-            WriteLine($"Frying {Meat}");
+            WriteLine($"Grilling {Meat}");
         }
 
         public virtual void Prepare()
@@ -30,6 +29,8 @@ namespace BurgerStore.FactoryMethodPattern
         {
             WriteLine($"Placing burger in a box.");
         }
+
+        public string GetName => Name;
 
     }
 }
