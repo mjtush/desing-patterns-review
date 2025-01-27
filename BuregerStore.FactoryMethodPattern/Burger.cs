@@ -1,27 +1,34 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Transactions;
+﻿using static System.Console;
 
-namespace BuregerStore.FactoryMethodPattern
+namespace BurgerStore.FactoryMethodPattern
 {
     public abstract class Burger
     {
-        public virtual void Prepare()
+        protected string Name;
+        protected string Roll;
+        protected string Meat;
+        protected List<string> Trimmings = [];
+
+
+        public virtual void Fry()
         {
-            throw new NotImplementedException();
+            WriteLine($"Frying {Meat}");
         }
 
-        public virtual void Cook()
+        public virtual void Prepare()
         {
-            throw new NotImplementedException();
+            WriteLine($" Preparing {Name}.");
+            WriteLine($" Cutting {Roll} and tossing {Meat} on it.");
+            WriteLine(" Adding Trimmings:");
+            foreach (var trimming in Trimmings)
+            {
+                WriteLine($"  {trimming}");
+            }
         }
 
         public virtual void Box()
         {
-            throw new NotImplementedException();
+            WriteLine($"Placing burger in a box.");
         }
 
     }
