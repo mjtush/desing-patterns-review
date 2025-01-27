@@ -1,6 +1,7 @@
-﻿using BurgerStore.FactoryMethodPattern;
+﻿using BurgerStores.FactoryMethodPattern;
+using static System.Console;
 
-namespace BurgerStore.FactoryMethodPattern
+namespace BurgerStores.FactoryMethodPattern
 {
     internal class PolishBurgerStore : BurgerStore
     {
@@ -41,6 +42,17 @@ namespace BurgerStore.FactoryMethodPattern
             Name = "Polish Pork Burger";
             Roll = "White Roll";
             Meat = "Pulled Pork";
+        }
+
+        public override void Prepare()
+        {
+            WriteLine($" Preparing {Name}.");
+            WriteLine($" Cutting {Roll} and polling {Meat} on it.");
+            WriteLine(" Adding Trimmings:");
+            foreach (var trimming in Trimmings)
+            {
+                WriteLine($"  {trimming}");
+            }
         }
     }
 

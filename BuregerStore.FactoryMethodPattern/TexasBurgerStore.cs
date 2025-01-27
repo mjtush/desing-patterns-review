@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BurgerStore.FactoryMethodPattern
+namespace BurgerStores.FactoryMethodPattern
 {
     internal class TexasBurgerStore : BurgerStore
     {
