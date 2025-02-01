@@ -6,7 +6,6 @@ namespace BurgerStoreApp.FactoryMethodPattern.AbstractFactory
 {
     internal class PolishBurgerStore : BurgerStore
     {
-        private Burger burger = null;
         private readonly IBurgerIngredientFactory _burgerIngredientFactory = new PolishBurgerIngredientFactory();
         protected override Burger CreateBurger(string type) => type switch
         {
@@ -24,6 +23,7 @@ namespace BurgerStoreApp.FactoryMethodPattern.AbstractFactory
         public PolishBeefBurger(IBurgerIngredientFactory burgerIngredientFactory)
         {
             _burgerIngredientFactory = burgerIngredientFactory;
+            Name = "Polish Beef Burger";
         }
 
         public override void Prepare()
@@ -32,6 +32,7 @@ namespace BurgerStoreApp.FactoryMethodPattern.AbstractFactory
             Roll = _burgerIngredientFactory.CreateRoll();
             Meat = _burgerIngredientFactory.CreateBeef();
             Trimmings = _burgerIngredientFactory.CreateVeggies();
+            DisplayIngredients(Roll, Meat, Trimmings);
         }
     }
 
@@ -41,6 +42,7 @@ namespace BurgerStoreApp.FactoryMethodPattern.AbstractFactory
         public PolishChickenBurger(IBurgerIngredientFactory burgerIngredientFactory)
         {
             _burgerIngredientFactory = burgerIngredientFactory;
+            Name = "Polish Chicken Burger";
         }
 
         public override void Prepare()
@@ -49,6 +51,7 @@ namespace BurgerStoreApp.FactoryMethodPattern.AbstractFactory
             Roll = _burgerIngredientFactory.CreateRoll();
             Meat = _burgerIngredientFactory.CreateChicken();
             Trimmings = _burgerIngredientFactory.CreateVeggies();
+            DisplayIngredients(Roll, Meat, Trimmings);
         }
     }
 
@@ -58,6 +61,7 @@ namespace BurgerStoreApp.FactoryMethodPattern.AbstractFactory
         public PolishPorkBurger(IBurgerIngredientFactory burgerIngredientFactory)
         {
             _burgerIngredientFactory = burgerIngredientFactory;
+            Name = "Polish Pork Burger";
         }
 
         public override void Prepare()
@@ -66,6 +70,8 @@ namespace BurgerStoreApp.FactoryMethodPattern.AbstractFactory
             Roll = _burgerIngredientFactory.CreateRoll();
             Meat = _burgerIngredientFactory.CreatePork();
             Trimmings = _burgerIngredientFactory.CreateVeggies();
+            DisplayIngredients(Roll, Meat, Trimmings);
+           
         }
     }
 
@@ -75,6 +81,7 @@ namespace BurgerStoreApp.FactoryMethodPattern.AbstractFactory
         public PolishVeggieBurger(IBurgerIngredientFactory burgerIngredientFactory)
         {
             _burgerIngredientFactory = burgerIngredientFactory;
+            Name = "Polish Veggie Burger";
         }
 
         public override void Prepare()
@@ -83,6 +90,7 @@ namespace BurgerStoreApp.FactoryMethodPattern.AbstractFactory
             Roll = _burgerIngredientFactory.CreateRoll();
             Meat = _burgerIngredientFactory.CreateVeggieMeat();
             Trimmings = _burgerIngredientFactory.CreateVeggies();
+            DisplayIngredients(Roll, Meat, Trimmings);
         }
     }
 }

@@ -27,6 +27,7 @@ namespace BurgerStoreApp.FactoryMethodPattern.AbstractFactory
         public TexasBeefBurger(IBurgerIngredientFactory burgerIngredientFactory)
         {
             _burgerIngredientFactory = burgerIngredientFactory;
+            Name = "Texas Beef Burger";
         }
 
         public override void Prepare()
@@ -35,6 +36,7 @@ namespace BurgerStoreApp.FactoryMethodPattern.AbstractFactory
             Roll = _burgerIngredientFactory.CreateRoll();
             Meat = _burgerIngredientFactory.CreateBeef();
             Trimmings = _burgerIngredientFactory.CreateVeggies();
+            DisplayIngredients(Roll, Meat, Trimmings);
         }
     }
 
@@ -44,6 +46,7 @@ namespace BurgerStoreApp.FactoryMethodPattern.AbstractFactory
         public TexasChickenBurger(IBurgerIngredientFactory burgerIngredientFactory)
         {
             _burgerIngredientFactory = burgerIngredientFactory;
+            Name = "Texas Chicken Burger";
         }
 
         public override void Prepare()
@@ -52,6 +55,7 @@ namespace BurgerStoreApp.FactoryMethodPattern.AbstractFactory
             Roll = _burgerIngredientFactory.CreateRoll();
             Meat = _burgerIngredientFactory.CreateChicken();
             Trimmings = _burgerIngredientFactory.CreateVeggies();
+            DisplayIngredients(Roll, Meat, Trimmings);
         }
     }
 
@@ -61,6 +65,7 @@ namespace BurgerStoreApp.FactoryMethodPattern.AbstractFactory
         public TexasPorkBurger(IBurgerIngredientFactory burgerIngredientFactory)
         {
             _burgerIngredientFactory = burgerIngredientFactory;
+            Name = "Texas Pork Burger";
         }
 
         public override void Prepare()
@@ -69,6 +74,7 @@ namespace BurgerStoreApp.FactoryMethodPattern.AbstractFactory
             Roll = _burgerIngredientFactory.CreateRoll();
             Meat = _burgerIngredientFactory.CreatePork();
             Trimmings = _burgerIngredientFactory.CreateVeggies();
+            DisplayIngredients(Roll, Meat, Trimmings);
         }
     }
 
@@ -78,6 +84,7 @@ namespace BurgerStoreApp.FactoryMethodPattern.AbstractFactory
         public TexasVeggieBurger(IBurgerIngredientFactory burgerIngredientFactory)
         {
             _burgerIngredientFactory = burgerIngredientFactory;
+            Name = "Texas Veggie Burger";
         }
 
         public override void Prepare()
@@ -86,6 +93,7 @@ namespace BurgerStoreApp.FactoryMethodPattern.AbstractFactory
             Roll = _burgerIngredientFactory.CreateRoll();
             Meat = _burgerIngredientFactory.CreateVeggieMeat();
             Trimmings = _burgerIngredientFactory.CreateVeggies();
+            DisplayIngredients(Roll, Meat, Trimmings);
         }
     }
 }
