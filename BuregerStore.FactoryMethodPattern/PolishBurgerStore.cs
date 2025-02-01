@@ -1,7 +1,7 @@
-﻿using BurgerStores.FactoryMethodPattern;
+﻿using BurgerStoreApp.FactoryMethodPattern;
 using static System.Console;
 
-namespace BurgerStores.FactoryMethodPattern
+namespace BurgerStoreApp.FactoryMethodPattern
 {
     internal class PolishBurgerStore : BurgerStore
     {
@@ -10,7 +10,7 @@ namespace BurgerStores.FactoryMethodPattern
             "beef" => new PolishBeefBurger(),
             "chicken" => new PolishChickenBurger(),
             "pork" => new PolishPorkBurger(),
-            "weggie" => new PolishWeggieBurger(),
+            "Veggie" => new PolishVeggieBurger(),
             _ => new PolishBeefBurger()
         };
     }
@@ -56,11 +56,11 @@ namespace BurgerStores.FactoryMethodPattern
         }
     }
 
-    internal class PolishWeggieBurger : Burger
+    internal class PolishVeggieBurger : Burger
     {
-        public PolishWeggieBurger()
+        public PolishVeggieBurger()
         {
-            Name = "Polish Weggie Burger";
+            Name = "Polish Veggie Burger";
             Roll = "Whole Wheat Roll";
             Meat = "Veggie Patty";
         }

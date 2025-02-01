@@ -1,13 +1,13 @@
 ﻿using static System.Console;
 
-namespace BurgerStores.FactoryMethodPattern
+namespace BurgerStoreApp.FactoryMethodPattern
 {
     public abstract class Burger
     {
         protected string Name;
         protected string Roll;
         protected string Meat;
-        protected List<string> Trimmings = ["Cheese", "Cucumber" , "Tomato"];
+        protected List<string> Trimmings = ["Cheese", "Cucumber", "Tomato"];
 
         public virtual void Grill()
         {

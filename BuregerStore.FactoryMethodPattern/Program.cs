@@ -1,4 +1,4 @@
-﻿using BurgerStores.FactoryMethodPattern;
+﻿using BurgerStoreApp.FactoryMethodPattern;
 
 BurgerStore plBurgerStore = new PolishBurgerStore();
 BurgerStore txBurgerStore = new TexasBurgerStore();

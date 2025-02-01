@@ -1,10 +1,11 @@
-﻿using System;
+﻿using BurgerStoreApp.FactoryMethodPattern;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BurgerStores.FactoryMethodPattern
+namespace BurgerStoreApp.FactoryMethodPattern
 {
     internal class TexasBurgerStore : BurgerStore
     {
@@ -13,7 +14,7 @@ namespace BurgerStores.FactoryMethodPattern
             "beef" => new TexasBeefBurger(),
             "chicken" => new TexasChickenBurger(),
             "pork" => new TexasPorkBurger(),
-            "weggie" => new TexasWeggieBurger(),
+            "Veggie" => new TexasVeggieBurger(),
             _ => new TexasBeefBurger()
         };
     }
@@ -48,11 +49,11 @@ namespace BurgerStores.FactoryMethodPattern
         }
     }
 
-    internal class TexasWeggieBurger : Burger
+    internal class TexasVeggieBurger : Burger
     {
-        public TexasWeggieBurger()
+        public TexasVeggieBurger()
         {
-            Name = "Texas Weggie Burger";
+            Name = "Texas Veggie Burger";
             Roll = "Whole Wheat Roll";
             Meat = "Veggie Patty";
         }

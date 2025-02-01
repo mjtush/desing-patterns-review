@@ -1,10 +1,11 @@
-﻿using System;
+﻿using BurgerStoreApp.FactoryMethodPattern;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BurgerStores.FactoryMethodPattern
+namespace BurgerStoreApp.FactoryMethodPattern
 {
     public abstract class BurgerStore
     {
