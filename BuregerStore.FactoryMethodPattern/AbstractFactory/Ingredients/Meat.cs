@@ -46,7 +46,7 @@ namespace BurgerStoreApp.FactoryMethodPattern.AbstractFactory.Ingredients
             Name = "Polish Beef";
         }
     }
-    }
+    
     public class PolishPork : Meat
     {
         public PolishPork()
