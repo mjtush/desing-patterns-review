@@ -17,8 +17,8 @@ namespace BurgerStoreApp.FactoryMethodPattern.AbstractFactory
             }
 
             Burger burger = CreateBurger(type);
-            burger.Grill();
             burger.Prepare();
+            burger.Grill();
             burger.Box();
 
             return burger;
